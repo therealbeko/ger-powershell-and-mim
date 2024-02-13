@@ -93,9 +93,13 @@ Es gibt verschiedene Variablentypen, unter anderem:
 |Datentyp|Wert|
 
 |-----------|-----------|
+
 |Integer|2, -5, 99|
+
 |String|"A", "Hallo", "Wie geht’s?"|
+
 |Boolean|$true / $false|
+
 |Array|25, "rot", $False, 16.5|
 
 
