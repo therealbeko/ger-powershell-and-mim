@@ -91,15 +91,10 @@ Wenn wir nun die Variable in der Konsole ausgeben mit Write-Host oder auch nur d
 Es gibt verschiedene Variablentypen, unter anderem:
 
 |Datentyp|Wert|
-
 |-----------|-----------|
-
 |Integer|2, -5, 99|
-
 |String|"A", "Hallo", "Wie geht’s?"|
-
 |Boolean|$true / $false|
-
 |Array|25, "rot", $False, 16.5|
 
 
@@ -110,7 +105,6 @@ Der Standarttyp einer uninitialisierten Variable ist $null.
 Mit dem Command ```.GetType().Name``` erhalten wir den Datentyp der Variable in einer Konsole ausgegeben. In folgendem Beispiel gehen wir davon aus das $name den Wert "Tobias" hat.
 
 |Beispiel|Output|
-
 |-----------|-----------|
 |$name.GetType().Name|String|
 
