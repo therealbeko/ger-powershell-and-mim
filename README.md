@@ -1,4 +1,3 @@
-
 # PowerShell CookBook
 
 ## Einleitung
@@ -33,8 +32,16 @@ Der Output lautet dann:
 ```
 Hello World
 ```
-
 <hr>
+
+### User Input (Read-Host)
+Wir können über das Terminal auch User Input speichern.
+```
+$my_input = Read-Host -Prompt "Enter a number: "
+```
+Diese Zeile verlangt vom User einen Prompt bevor es im Script weitergeht. Der Wert welcher eingegeben wird, wird in diesem Falle in der Variable ```$my_input``` gespeichert
+<hr>
+
 
 ### Basic Commands
 ```
@@ -75,16 +82,83 @@ Wenn wir nun die Variable in der Konsole ausgeben mit Write-Host oder auch nur d
 
 ### Variablentypen
 Es gibt verschiedene Variablentypen, unter anderem:
+| Datentyp      | Wert |
+| ----------- | ----------- |
+| Integer      |  2, -5, 99       |
+| String   | "A", "Hallo", "Wie geht’s?"        |
+| Boolean   | $true / $false        |
+| Array   | 25, "rot", $False, 16.5        |
 
 
+PowerShell überweist der Variable automatisch den Datentypen anhand dem Wert welchen wir zuweisen. Das nennt sich "dynamic typing".
+
+Der Standarttyp einer uninitialisierten Variable ist $null.
+
+Mit dem Command ```.GetType().Name``` erhalten wir den Datentyp der Variable in einer Konsole ausgegeben. In folgendem Beispiel gehen wir davon aus das $name den Wert "Tobias" hat.
+| Beispiel      | Output |
+| ----------- | ----------- |
+| $name.GetType().Name      |  String      |
 <hr>
 
-### User Input (Read-Host)
-Wir können über das Terminal auch User Input speichern.
+### Constrained Variables
+Wenn wir den Datentypen der Variable bestimmen möchten, können wir eine "constrained Variable" mittels "type casting" erstellen.
 ```
-$my_input = Read-Host -Prompt "Enter a number: "
+[Int]$age = 25
 ```
-Diese Zeile verlangt vom User einen Prompt bevor es im Script weitergeht. Der Wert welcher eingegeben wird, wird in diesem Falle in der Variable ```$my_input``` gespeichert
+Während wir die Variable initialisieren bestimmen wir in den eckigen Klammern den Datentypen der Variable.
+Nun ist es auch nicht mehr möglich andere Typen wie z.B einen String dieser Variable zuzuweisen.
+<hr>
+
+### Mehrere Variablen erstellen
+Mehrere Variablen können auch in einer Zeile erstellt werden. Nachfolgend zwei Beispiele.
+
+Beispiel 1: Mehrere Variablen mit dem selben Wert erstellen:
+```
+$i = $j = $k = 0
+```
+Beispiel 2: Mehrere Variablen mit verschiedenen Werten erstellen:
+```
+$number, $color, $bool = 25, "red", $false
+```
+<hr>
+
+### Environment Variablen
+Environment Variablen speichern Informationen welche relevant für unsere aktuelle Umgebung sind wie z.B das Betriebssystem oder die Session des Users. Sie sind globale Variablen auf welche wir über weitere Commands und Programme zugreifen können.
+
+Environment Variablen werden als Strings gespeichert. Wir können mit Get-ChildItem eine gesamte Liste der Environment Variablen erhalten welche bereits existieren:
+```
+Get-ChildItem Env:
+```
+Output:
+```
+Name Value
+---- -----
+ALLUSERSPROFILE  C:\ProgramData  
+APPDATA          C:\Users\xxx\AppData\Roaming  
+...
+```
+Um einen spezifischen Wert einer Environment Variable zu erhalten,  können wir folgenden Command nutzen:
+```
+(Get-ChildItem Env:APPDATA).Value
+```
+Output:
+```
+C:\Users\xxx\AppData\Roaming
+```
+Zwei beliebte Environment Variablen sind HOME und PATH. Die HOME Variable definiert den Home Pfad des aktuellen Benutzers. PATH inkludiert alle Pfade welche Applikationen nach ausführbaren Anwendungen schauen.
+
+#### Environment Variable erstellen:
+```
+$Env:EXAMPLE_ENV_VAR = "custom value"
+```
+<strong>Wichig:</strong> Environment Variablen werden immer gross geschrieben.
+
+Der Vorteil von diesen ist das über die ganze Terminal-Session und in den Scripts darauf zugegriffen werden kann. 
+
+Environment Variablen welche mehrere Werte enthalten separieren sich durch ein Semikolon z.B:
+```
+Custom value; Another value
+```
 <hr>
 
 ### MPR deaktivieren (Disable MPR)
