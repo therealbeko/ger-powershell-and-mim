@@ -171,6 +171,33 @@ Custom value; Another value
 ```
 <hr>
 
+### Operatoren
+
+Operatoren werden benötigt um verschiedene Berechnugnen mit Variablen durchzuführen.
+
+Es gibt die folgenden Operatoren in PowerShell:
+- Arithmetische Operatoren
+- Assignment Operatoren
+- Unary Operatoren
+- Comparison Operatoren
+- Logical Operatoren
+
+#### Die Arithmetischen Operatoren:
+
+|Operator|Beschreibung|
+|-----------|-----------|
+|+|(Addition) Addiert Zahlen und führt Strings zusammen|
+|-|(Substraktion) Subtrahiert Zahlen|
+|/|(Division) Dividiert Zahlen|
+|%|(Modulo) Gibt den Restwert einer Division zurück|
+
+Wir können mit Zahlen direkt rechnen z.B: 5 + 5 oder auch mit Variablen z.B: ```$x + $y```.
+
+Strings können ebenfalls mit Arithmetischen Operatoren manipuliert werden. z.B: $name = "Tom"
+```$name + $name``` ergibt = ```TomTom```.
+
+<hr>
+
 ### MPR deaktivieren (Disable MPR)
 
 ```
