@@ -198,6 +198,85 @@ Strings können ebenfalls mit Arithmetischen Operatoren manipuliert werden. z.B:
 
 <hr>
 
+### Assignment und Unary Operatoren
+Assignment Operatoren können verwendet werden um Werte zu vergeben, verändern oder ergänzen.
+
+Der Standart Syntax hierbei wäre: ```<Variable>``` = ```<Wert>```.
+
+Es gibt auch andere Assignment Operatoren welche compund assignment operators gennant werden. Beispiele:
+
+|Operator|
+|-----------|
+|+=|
+|-=|
+|*=|
+|/=|
+|%=|
+
+Compound assignment operators führen zu erst die Aktion aus und weisen dann erst den Wert der Variable zu.
+
+Zum Beispiel:
+
+```
+$x = 5
+$x += 1
+Output: 6
+```
+Zu erst wird die 5 mit der 1 addiert und erst dann der Variable $x zugewiesen. 
+
+Diese Operatoren können auch mit den Environment Variablen verwendet werden, da Strings addiert und kopiert werden können.
+
+#### Unary Operatoren
+Unary Operators können den Wert der Variable erhöhen oder verringen, z.B:
+```
+$x = 5
+$x++
+$x
+Output: 6
+```
+
+<hr>
+
+### Equality Comparison Operatoren
+Comparison Operator werden genutzt um Werte zu vergleichen. Testkonditionen zu erstellen oder Elemente einer Kollektion z.B eines Arrays zu filtern. Sie geben uns die Werte True oder False als Resultat zurück.
+
+Beschreibung der Equality Comparison Operatoren:
+
+|Operator|Beschreibung|
+|-----------|-----------|
+|-eq|Prüft ob zwei Werte den selben Wert enthalten|
+|-ne|Prüft ob zwei Werte nicht den selben Wert enthalten|
+|-gt|Prüft ob der Wert links grösser ist als der Wert rechts|
+|-lt|Prüft ob der Wert links kleiner ist als der Wert rechts|
+|-ge|Prüft ob der Wert links grösser oder gleich gross ist wie der Wert rechts|
+|-le|Prüft ob der Wert links kleiner oder gleich gross ist wie der Wert rechts|
+
+Beispiel:
+```
+5 -eq 4
+Output: False
+```
+#### Logische Operatoren
+Logische Operatoren erlauben es uns mehrere Wahrheitswerte in einer komplexeren Kondition zu prüfen.
+
+|Operator|Beschreibung|
+|-----------|-----------|
+|-and|Prüft ob Wert 1 und Wert 2 die Kondition erfüllen|
+|-or|Prüft ob Wert 1 oder Wert 2 die Kondition erfüllt|
+|-or|Prüft ob Wert 1 oder Wert 2 die Kondition erfüllt|
+|-xor|Kondition erfüllt wenn nur eine davon stimmt|
+|-not|Kondition erfüllt wenn der Wert nicht enthalten ist|
+
+Grafische Tabellen ansicht (T = true, F = false):
+|x|y|x -and y|x -or y|x -xor y|-not x|
+|-----------|-----------|-----------|-----------|-----------|-----------|
+|T|T|T|T|F|F|
+|T|F|F|T|T|F|
+|F|T|F|T|T|T|
+|F|F|F|F|F|T|
+
+<hr>
+
 ### MPR deaktivieren (Disable MPR)
 
 ```
