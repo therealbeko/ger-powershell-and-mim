@@ -83,6 +83,7 @@ Wenn wir nun die Variable in der Konsole ausgeben mit Write-Host oder auch nur d
 ### Variablentypen
 Es gibt verschiedene Variablentypen, unter anderem:
 |Datentyp|Wert|
+
 |-----------|-----------|
 |Integer|2, -5, 99|
 |String|"A", "Hallo", "Wie geht’s?"|
