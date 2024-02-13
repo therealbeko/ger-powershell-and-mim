@@ -207,7 +207,7 @@ Es gibt auch andere Assignment Operatoren welche compund assignment operators ge
 
 
 |Operator|
-|-----------|
+|-|
 |+=|
 |-=|
 |*=|
