@@ -205,7 +205,6 @@ Der Standart Syntax hierbei wäre: ```<Variable>``` = ```<Wert>```.
 
 Es gibt auch andere Assignment Operatoren welche compund assignment operators gennant werden. Beispiele:
 
-
 |Operator|
 |-|
 |+=|
