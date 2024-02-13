@@ -268,6 +268,7 @@ Logische Operatoren erlauben es uns mehrere Wahrheitswerte in einer komplexeren 
 |-not|Kondition erfüllt wenn der Wert nicht enthalten ist|
 
 Grafische Tabellen ansicht (T = true, F = false):
+
 |x|y|x -and y|x -or y|x -xor y|-not x|
 |-----------|-----------|-----------|-----------|-----------|-----------|
 |T|T|T|T|F|F|
