@@ -82,7 +82,7 @@ Wenn wir nun die Variable in der Konsole ausgeben mit Write-Host oder auch nur d
 
 ### Variablentypen
 Es gibt verschiedene Variablentypen, unter anderem:
-| Datentyp      | Wert |
+|Datentyp|Wert|
 |-----------|-----------|
 |Integer|2, -5, 99|
 |String|"A", "Hallo", "Wie geht’s?"|
@@ -95,9 +95,9 @@ PowerShell überweist der Variable automatisch den Datentypen anhand dem Wert we
 Der Standarttyp einer uninitialisierten Variable ist $null.
 
 Mit dem Command ```.GetType().Name``` erhalten wir den Datentyp der Variable in einer Konsole ausgegeben. In folgendem Beispiel gehen wir davon aus das $name den Wert "Tobias" hat.
-| Beispiel      | Output |
-| ----------- | ----------- |
-| $name.GetType().Name      |  String      |
+|Beispiel|Output|
+|-----------|-----------|
+|$name.GetType().Name|String|
 <hr>
 
 ### Constrained Variables
