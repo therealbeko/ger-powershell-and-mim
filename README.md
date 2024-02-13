@@ -13,11 +13,18 @@
 
 ### Inhaltsverzeichnis
 <strong>PowerShell</strong>
-- Eintrag
+- [Write-Host](#write-host)
+- [User Input](#user-input-read-host)
+- [Basic Commands](#basic-commands)
+- [Command History](#command-history)
+- [Variablen](#variablen)
+- - [Variablentypen](#variablentypen) 
+- - [Constrained Variables](#constrained-variables)
+- - [Mehrere Variablen erstellen](#mehrere-variablen-erstellen)
+- - [Environment Variablen](#environment-variablen)
 
 <strong>MIM</strong>
  - [MPR deaktivieren](#mpr-deaktivieren-disable-mpr)
-
 
 <hr>
 
