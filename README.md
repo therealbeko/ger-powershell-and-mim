@@ -83,12 +83,11 @@ Wenn wir nun die Variable in der Konsole ausgeben mit Write-Host oder auch nur d
 ### Variablentypen
 Es gibt verschiedene Variablentypen, unter anderem:
 | Datentyp      | Wert |
-
-| ----------- | ----------- |
-| Integer      |  2, -5, 99       |
-| String   | "A", "Hallo", "Wie geht’s?"        |
-| Boolean   | $true / $false        |
-| Array   | 25, "rot", $False, 16.5        |
+|-----------|-----------|
+|Integer|2, -5, 99|
+|String|"A", "Hallo", "Wie geht’s?"|
+|Boolean|$true / $false|
+|Array|25, "rot", $False, 16.5|
 
 
 PowerShell überweist der Variable automatisch den Datentypen anhand dem Wert welchen wir zuweisen. Das nennt sich "dynamic typing".
