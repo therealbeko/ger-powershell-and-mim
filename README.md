@@ -286,3 +286,34 @@ $MPR = Get-Resource -AttributeName "DisplayName" -AttributeValue "Display Name o
 $MPR.Disabled = $true
 Save-Resource $MPR
 ```
+<hr>
+
+### MIM - User erstellen
+Modul importieren und Verbindung zum FIM Service herstellen:
+```
+Import-Module LithnetRMA
+Set-ResourceManagementClient -BaseAddress localhost
+```
+Das Script zum erstellen eines Users. Wichtig: PrimaryStructure und PersonType müssen als GUID angegeben werden.
+```
+$birthDateFormat = "M/d/yyyy"
+$employmentDateFormat = "M/d/yyyy"
+$culture = [System.Globalization.CultureInfo]::InvariantCulture
+
+# Create a new user resource
+$user = New-Resource -ObjectType "TemporaryPrimaryAccount"
+$user.FirstName = "Max"
+$user.LastName = "Mustermann"
+$user.DisplayName = $user.FirstName + " " + $user.LastName
+$user.Birthdate = [DateTime]::ParseExact("1/1/1990", $birthDateFormat, $culture)
+# PersonType GUID angeben!
+$user.PersonType = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$user.Domain = "EDA"
+# PrimaryStructure GUID angeben!
+$user.PrimaryStructure = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$user.EmployeeStartDate = [DateTime]::ParseExact("2/19/2024", $employmentDateFormat, $culture)
+
+# Save the new user
+Save-Resource -Resource $user
+```
+<hr>
