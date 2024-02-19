@@ -23,9 +23,15 @@
 - - [Constrained Variables](#constrained-variables)
 - - [Mehrere Variablen erstellen](#mehrere-variablen-erstellen)
 - - [Environment Variablen](#environment-variablen)
+- [Operatoren](#operatoren)
+- - [Assignment und Unary Operatoren](#assignment-und-unary-operatoren)
+- - [Equality Comparison Operatoren](#equality-comparison-operatoren)
+- - [Logische Operatoren](#logische-operatoren)
 
 <strong>MIM</strong>
  - [MPR deaktivieren](#mpr-deaktivieren-disable-mpr)
+ - [User erstellen](#mim---user-erstellen)
+
 
 <hr>
 
