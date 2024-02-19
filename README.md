@@ -309,7 +309,7 @@ $user.DisplayName = $user.FirstName + " " + $user.LastName
 $user.Birthdate = [DateTime]::ParseExact("1/1/1990", $birthDateFormat, $culture)
 # PersonType GUID angeben!
 $user.PersonType = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-$user.Domain = "EDA"
+$user.Domain = "XXX"
 # PrimaryStructure GUID angeben!
 $user.PrimaryStructure = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 $user.EmployeeStartDate = [DateTime]::ParseExact("2/19/2024", $employmentDateFormat, $culture)
